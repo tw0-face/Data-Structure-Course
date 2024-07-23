@@ -1,0 +1,96 @@
+	
+	public int[] reverse(int[] arr) {
+		int n = arr.length; 
+		int[] new_arr = new int[n]; 
+	       int last =n-1;
+		   for (int i = 0; i < n; i++) { 
+			   new_arr[last] = arr[i]; 
+	            last--; 
+	        } 
+		return new_arr;
+		
+		
+	}
+	
+	
+	
+		public int[] sumEvenOdd(int[] arr) {
+		int[] sum = {0, 0};
+		int n = arr.length; 
+		if (n == 0)
+			return sum;
+		   for (int i = 0; i < n; i++) {
+	            if (arr[i] % 2 == 0)
+	            	sum[0] += arr[i];
+	            else
+	            	sum[1] += arr[i];
+	        }
+		return sum;	
+		
+	}
+	
+	
+	
+	public double average(int[] arr) {
+		int n = arr.length; 
+		int sum = 0;
+		if (n == 0)
+			return 0;
+		   for (int i = 0; i < n; i++) {
+			   sum += arr[i];	            
+	        }
+		  
+		return sum/arr.length;	
+	}
+	
+	
+		public int[] moveValue(int[] arr, int val) {
+		int n = arr.length; 
+		int[] temp = new int[n];
+		int j =0;
+		int last =n-1;
+		   for (int i = 0; i < n; i++) {
+			   if(arr[i] != val ) {
+				   temp[j] = arr[i];
+			   j++;}
+			   else {
+				   temp[last] = val;
+			   last--;}
+	        }
+		  
+		return temp;	
+	}
+	
+	
+	
+		public int[][] transpose(int[][] arr){
+	  int n_row = arr.length;
+	    int n_col = arr[0].length;
+	    int[][] trans = new int[n_col][n_row];
+	      for(int i = 0; i < n_row; i++) {
+	            for (int j = 0; j < n_col; j++) {
+	                trans[j][i] = arr[i][j];
+	            }
+	        }
+		  
+		return trans;	
+	}
+	
+	
+	
+	
+		public int fibonacci(int n) {
+int f_term = 0, s_term = 1 ;
+for (int i = 0; i < n; i++) {
+    int n_term = f_term + s_term;
+    f_term = s_term;
+    s_term = n_term;
+  }
+		  
+		return s_term-f_term;	
+	}
+	
+	
+	
+	
+	
